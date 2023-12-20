@@ -29,7 +29,7 @@ abstract class House {
 
 class MyHouse extends House {
   public openDoor(key: Key): void {
-    key.getSignature() === this.key.getSignature() && this.door === true;
+    this.door = key.getSignature() === this.key.getSignature();
   }
 }
 
